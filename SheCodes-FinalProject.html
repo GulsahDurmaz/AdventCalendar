@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advent Calendar</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgb(17, 151, 147) 11.2%,
+          rgb(154, 214, 212) 55.4%,
+          rgb(255, 233, 171) 100.2%
+        );
+      }
+      h1 {
+        color: #d55858;
+        font-size: 32px;
+        font-weight: bolder;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        color: #ffffff;
+        font-size: 24px;
+        text-align: center;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      button {
+        display: block;
+        font-size: 15px;
+        margin: 0 auto 30px auto;
+        color: #d55858;
+        background-color: transparent;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid #d55858;
+        border-radius: 3px 3px 3px 3px;
+        box-shadow: 1px 1px 10px #8d8c92;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: #d55858;
+        color: #f5f0fe;
+        cursor: pointer;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #cba600;
+        text-align: center;
+        padding: 20px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        font-weight: thin;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 25px;
+        font-size: 13px;
+        width: 500px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        color: #ffffff;
+      }
+      img {
+        display: block;
+        margin: auto;
+        border-radius: 30px;
+        padding: 20px;
+        width: 270px;
+      }
+
+      .developerName {
+        text-align: center;
+        font-size: 10px;
+        opacity: 0.7;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I <em>love </em>Advent Calendar ! 🤩</h1>
+      <h2>It is the best thing about Winter</h2>
+      <img
+        src="https://m.media-amazon.com/images/I/813x6nRtWwL._AC_SL1500_.jpg"
+        alt="Advent Calender"
+      />
+      <p>
+        An Advent calendar with the nativity scene behind the 24th door and the
+        adoration of the shepherds behind the 25th. Each of the four Sundays in
+        Advent has an additional door. An Advent calendar is used to count the
+        days of Advent in anticipation of Christmas. Since the date of the First
+        Sunday of Advent varies, falling between November 27 and December 3
+        inclusive, many reusable Advent calendars made of paper or wood begin on
+        December 1; others start from the First Sunday of Advent and thus
+        include the last few days of November that begin the liturgical season
+        of Advent.  <br /> 
+        The Advent calendar was first used by German Lutherans in the 19th and 
+        20th centuries, and has since then spread to other Christian denominations.
+
+      </p>
+        <a
+          href="https://en.wikipedia.org/wiki/Advent_calendar"
+          target="_blank"
+          class="learn-more"
+        >
+          Learn more on Wikipedia
+        </a>
+      <button class="buy-button">👉 Customise your Advent Calendar</button>
+      <div class="developerName">This page was built by <strong> Gülsah Durmaz </strong></div>
+       <script>
+       function takeInfo() {
+        let firstName = prompt("What is your first name?");
+        let age = prompt("How old are you?");
+        let heading = document.querySelector("h1");
+        if (age >= 18) {
+         heading.innerHTML = "Hi " + firstName + "! We are gonna contact you soon! 😇";
+        } else {
+        heading.innerHTML =
+        "Sorry " + firstName + ", you can't order 😔.";
+        }
+      }      
+     let applyButton = document.querySelector("button");
+     applyButton.addEventListener("click", takeInfo);
+    </script>
+  </body>
+</html>
